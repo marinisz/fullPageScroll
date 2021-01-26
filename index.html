@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Page Scroll</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html,body{
+            height: 100%;
+            overflow: hidden;
+        }
+        #container, .sections,.section{
+            position: relative;
+            height: 100%;
+        }
+        .section{
+            background-color: #000;
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+        #section0{
+            background-image: url(pexels-andre-furtado-370717.jpg);
+            color: white;
+            display: flex;
+            justify-content: center;
+        }
+        #section1{
+            background-image: url(pexels-gdtography-911738.jpg);
+            display: flex;
+            justify-content: center;
+        }
+        #section3{
+            background-image: url(123.jpg);
+            color: white;
+            display: flex;
+            justify-content: center;
+        }
+        #section2{
+            background-image: url(pexels-dom-j-310452.jpg);
+            display: flex;
+            justify-content: center;
+        }
+        /*calling xswitch funcions */
+        .pages{
+            position: fixed;
+            right: 10px;
+            top: 50%;
+            list-style: none;
+        }
+        .pages li{
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+            margin: 15px 0 0 7px;
+        }
+
+        .pages li.active{
+            margin-left: 0;
+            width: 14px;
+            height: 14px;
+            border: 4px solid white;
+            background: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container" data-XSwitch>
+        <div class="sections">
+            <div class="section" id="section0">
+                <h1>testando - bg0</h1>
+            </div>
+            <div class="section" id="section1">
+                <h1>testando - bg1</h1>
+            </div>
+            <div class="section" id="section2">
+                <h1>testando - bg2</h1>
+            </div>
+            <div class="section" id="section3">
+                <h1>testando - bg3</h1>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+    <script src="XSwitch.min.js"></script>
+</body>
+</html>
